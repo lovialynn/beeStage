@@ -1,0 +1,150 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+#task1 {
+    width: 400px;
+}
+
+.head span:nth-child(1),
+.item span:nth-child(1) {
+    width: 100px;
+}
+
+.head span:nth-child(2),
+.item span:nth-child(2) {
+    width: 100%;
+}
+
+.head span:nth-child(3),
+.item span:nth-child(3) {
+    width: 100px;
+
+}
+
+.head {
+    display: flex;
+}
+
+.head span {
+    background-color: black;
+    padding: 5px;
+    color: white;
+    display: inline-block;
+}
+
+.item {
+    display: flex;
+
+}
+
+.item span {
+    display: inline-block;
+    padding: 3px 5px;
+}
+
+.item:nth-child(odd) span,
+.item:nth-child(1) span,
+.item:nth-child(2) span,
+.item:nth-child(3) span {
+    color: red;
+}
+
+.item:nth-child(even) span {
+    background-color: #eeeeee;
+}
+
+.input {
+    margin: 40px;
+    width: 200px;
+    padding: 3px;
+    outline: none;
+    border: 1px solid #666666;
+    transition: width .3s;
+    border-radius: 3px;
+}
+
+.input:focus {
+    width: 300px;
+    border: 1px solid royalblue;
+}
+
+.slide {
+    width: 400px;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slidePics {
+    display: flex;
+    transition: 2s ease;
+}
+#task4 .slidePics{
+    display: flex;
+    transition: 2s ease;
+    animation: animateImg ease 8s infinite;
+}
+.slidePics img {
+    padding: 0;
+    width: 400px;
+    height: 300px;
+}
+
+.slide input{
+  display: none;
+}
+.slide label{
+    position: absolute;
+    padding: 3px 5px;
+    border: none;
+    background-color: rgba(252, 252, 252, 0.329);
+    outline: none;
+    right: 0;
+    bottom: 0;
+}
+label[for="btns1"]{
+    right: 40px;
+}
+label[for="btns2"]{
+    right: 20px;
+}
+#btns1:checked~.slidePics {
+    margin-left: 0px;
+}
+#btns2:checked~.slidePics {
+    margin-left: -400px;
+}
+#btns3:checked~.slidePics {
+    margin-left: -800px;
+}
+@keyframes animateImg {
+    0% {
+        margin-left: 0px;
+    }
+
+    20% {
+        margin-left: -0px;
+    }
+
+    40% {
+        margin-left: -400px;
+    }
+
+    60% {
+        margin-left: -400px;
+    }
+
+    80% {
+        margin-left: -800px;
+    }
+
+    100% {
+        margin-left: -800px;
+    }
+}
